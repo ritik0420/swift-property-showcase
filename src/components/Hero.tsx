@@ -11,6 +11,8 @@ export const Hero = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
+        {/* Extra dark overlay to ensure strong text contrast over bright images */}
+        <div className="absolute inset-0 bg-slate-950/55" />
       </div>
       
       <div className="relative z-10 container mx-auto px-4 text-center text-white">

@@ -40,11 +40,11 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
     
-    /* Dark hero overlay gradient for better text contrast (approx 45–55% opacity) */
+    /* Hero overlay gradient - slightly darker for better text contrast */
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(215 28% 8% / 0.55),
-      hsl(215 28% 4% / 0.45)
+      hsl(215 28% 6% / 0.75),
+      hsl(215 28% 2% / 0.65)
     );
     --gradient-premium: linear-gradient(135deg, hsl(215 28% 17%), hsl(215 28% 25%));
     --gradient-accent: linear-gradient(135deg, hsl(35 80% 55%), hsl(35 80% 65%));
