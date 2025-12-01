@@ -17,8 +17,10 @@ export default defineConfig(() => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    // Change Vite's output directory from the default "dist" to "build"
-    outDir: "build",
-  },
+  // Use Vite's default output directory "dist" so platforms like Vercel
+  // can automatically detect the build output.
+  // (If you ever need a custom directory again, you can re‑enable this.)
+  // build: {
+  //   outDir: "build",
+  // },
 }));
