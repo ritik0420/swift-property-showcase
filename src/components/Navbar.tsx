@@ -70,7 +70,7 @@ export const Navbar = () => {
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 text-accent shadow-sm shadow-accent/30">
               <Home className="h-5 w-5" />
             </span>
-            <span className="hidden sm:block text-xl font-display font-semibold tracking-tight text-primary">
+            <span className="text-lg sm:text-xl font-display font-semibold tracking-tight text-primary">
               LuxeEstate
             </span>
           </a>
