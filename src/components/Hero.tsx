@@ -5,8 +5,8 @@ import heroImage from "@/assets/hero-estate.jpg";
 
 export const Hero = () => {
   return (
-    <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-      <div 
+    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-24 md:pt-32 pb-16">
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
@@ -14,22 +14,29 @@ export const Hero = () => {
       </div>
       
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 animate-[fade-in_0.8s_ease-out]">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-4 sm:mb-6 animate-fade-in">
           Find Your Dream Home
         </h1>
-        <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-2xl mx-auto animate-[fade-in_0.8s_ease-out_0.2s] opacity-0 [animation-fill-mode:forwards]">
+        <p className="text-base sm:text-lg md:text-2xl mb-8 sm:mb-10 md:mb-12 text-white/90 max-w-2xl mx-auto animate-fade-in delay-150">
           Discover luxury properties in the most prestigious locations
         </p>
         
-        <div className="max-w-3xl mx-auto bg-white rounded-lg p-2 shadow-2xl flex gap-2 animate-[slide-up_0.8s_ease-out_0.4s] opacity-0 [animation-fill-mode:forwards]">
-          <Input
-            placeholder="Enter location, property type, or keyword..."
-            className="flex-1 border-0 focus-visible:ring-0 text-foreground text-lg"
-          />
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8">
-            <Search className="w-5 h-5 mr-2" />
-            Search
-          </Button>
+        <div className="max-w-3xl mx-auto animate-slide-up delay-300">
+          <div className="relative flex flex-col sm:flex-row items-stretch sm:items-center gap-2 rounded-2xl sm:rounded-full bg-white/95 px-3 py-2 shadow-[0_22px_60px_-26px_rgba(15,23,42,0.95)] backdrop-blur-md ring-1 ring-white/40 hover:ring-accent/60 transition-all">
+            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-6 text-muted-foreground/70">
+              <Search className="h-5 w-5" />
+            </div>
+            <Input
+              placeholder="Search by city, neighborhood, or property name..."
+              className="h-12 w-full rounded-full border-0 bg-transparent pl-14 pr-4 text-sm md:text-base text-foreground placeholder:text-muted-foreground/70 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none"
+            />
+            <Button
+              size="lg"
+              className="w-full sm:w-auto h-11 rounded-full bg-accent px-6 text-sm md:text-base font-semibold text-accent-foreground shadow-md hover:bg-accent/90 hover:shadow-lg transition-all"
+            >
+              Search
+            </Button>
+          </div>
         </div>
       </div>
     </section>

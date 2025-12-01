@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, User } from "lucide-react";
 
 export const ContactSection = () => {
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-20" />
+      {/* Decorative background pattern */}
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_70%_55%_at_50%_0%,#000_65%,transparent_110%)] opacity-15" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -59,7 +59,7 @@ export const ContactSection = () => {
               </div>
               
               {/* Google Maps */}
-              <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/50 h-[350px] hover:shadow-accent/20 transition-shadow duration-500">
+              <div className="rounded-3xl overflow-hidden border border-border/50 h-[350px] shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-premium)] transition-shadow duration-500">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.3287964933396!2d-118.40193!3d34.06991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bbfea5709df5%3A0x8c21c7e7b5ac0f3c!2sBeverly%20Hills%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890"
                   width="100%"
@@ -74,27 +74,36 @@ export const ContactSection = () => {
             </div>
             
             {/* Contact Form */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-border/50 animate-scale-in hover:shadow-accent/10 transition-shadow duration-500">
+            <div className="bg-card/60 backdrop-blur-md rounded-3xl p-8 shadow-[var(--shadow-elegant)] border border-border/60 animate-scale-in hover:shadow-[var(--shadow-premium)] transition-shadow duration-500">
               <h3 className="font-display text-3xl font-bold text-primary mb-6">Send Us a Message</h3>
               <form className="space-y-5">
-                <div>
+                <div className="relative">
+                  <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-muted-foreground/70">
+                    <User className="w-4 h-4" />
+                  </span>
                   <Input
                     placeholder="Your Name"
-                    className="bg-background border-border/50 h-12 focus:border-accent focus:ring-accent/20 transition-all duration-300 text-base"
+                    className="bg-background border-border/50 h-12 pl-11 focus:border-accent focus:ring-accent/20 transition-all duration-300 text-base"
                   />
                 </div>
-                <div>
+                <div className="relative">
+                  <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-muted-foreground/70">
+                    <Mail className="w-4 h-4" />
+                  </span>
                   <Input
                     type="email"
                     placeholder="Your Email"
-                    className="bg-background border-border/50 h-12 focus:border-accent focus:ring-accent/20 transition-all duration-300 text-base"
+                    className="bg-background border-border/50 h-12 pl-11 focus:border-accent focus:ring-accent/20 transition-all duration-300 text-base"
                   />
                 </div>
-                <div>
+                <div className="relative">
+                  <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-muted-foreground/70">
+                    <Phone className="w-4 h-4" />
+                  </span>
                   <Input
                     type="tel"
                     placeholder="Phone Number"
-                    className="bg-background border-border/50 h-12 focus:border-accent focus:ring-accent/20 transition-all duration-300 text-base"
+                    className="bg-background border-border/50 h-12 pl-11 focus:border-accent focus:ring-accent/20 transition-all duration-300 text-base"
                   />
                 </div>
                 <div>

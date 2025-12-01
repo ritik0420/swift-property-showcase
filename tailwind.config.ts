@@ -96,14 +96,15 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s ease-out forwards",
-        "slide-up": "slide-up 0.6s ease-out forwards",
-        "scale-in": "scale-in 0.4s ease-out forwards",
+        // Slightly slower, more elegant hero / UI animations
+        "fade-in": "fade-in 1s ease-out forwards",
+        "slide-up": "slide-up 1.1s ease-out forwards",
+        "scale-in": "scale-in 0.6s ease-out forwards",
         "glow": "glow 2s ease-in-out infinite",
       },
       fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['Cormorant Garamond', 'Times New Roman', 'serif'],
+        sans: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
     },
   },
